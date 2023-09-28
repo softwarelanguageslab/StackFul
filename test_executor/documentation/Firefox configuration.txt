@@ -1,0 +1,5 @@
+- Set-up proxy + disable default proxy blocking of localhost
+- Disable blocking pop-ups (Settings -> Privacy & Security -> Permissions -> Uncheck 'Block pup-up windows')
+- Set flag 'dom.allow_scripts_to_close_windows' in about:config to true
+- Set 'toolkit.startup_max_resumed_crashes' in about:config to -1
+- (Disable Firefox asking to be the default browser) 

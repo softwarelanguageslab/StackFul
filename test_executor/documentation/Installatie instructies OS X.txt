@@ -1,0 +1,34 @@
+- Installeer gcc, make, python, en curl
+- Installeer docker: https://docs.docker.com/desktop/install/mac-install/
+- Clone Z3 (https://github.com/Z3Prover/z3). Volg de eerste vier commando's onder "Building Z3 using make and GCC/Clang". Installeer daarna de Java bindings via:
+python scripts/mk_make.py --java
+gevolgd door opnieuw:
+cd build
+make
+sudo make install
+- Controleer of de Java library "com.microsoft.z3.jar" in je build folder staat. Zoja, laat de environment variabele DYLD_LIBRARY_PATH dan wijzen naar die build folder:
+export DYLD_LIBRARY_PATH=pad_naar_je_build_folder
+Je voegt deze definitie best ook toe aan je bash_profile of bashrc zodat dat telkens gebeurt wanneer je je computer opstart of een nieuwe terminal begint.
+
+- Clone de master-branch van JS_Concolic (https://gitlab.soft.vub.ac.be/<jouw_project>/JS_Concolic)
+- Clone de master-branch van Concolic_Testing_Backend (https://gitlab.soft.vub.ac.be/<jouw_project>/Concolic_Testing_Backend)
+
+- Als sbt nog niet geïnstalleerd is:
+	* Installeer SDKMAN (https://sdkman.io/install)
+	* Volg de eerste drie commando's op https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Mac.html om sbt te installeren via SDKMAN
+- Installeer nvm (node version manager) via de instructies op https://github.com/nvm-sh/nvm#installing-and-updating
+- Installeer Node 18.7.0: nvm install 18.7.0
+- Compileer Concolic_Testing_Backend: sbt compile
+- Run tests: sbt test  (sommige testen zullen falen, dat is geen probleem. Het enige belangrijke is dat de Backend de geïnstalleerde Z3 solver heeft gevonden)
+
+- Installeer JavaScript packages in JS_Concolic: npm install
+- In geval van problemen bij het installeren van de aran packages: gebruik https://blog.bitsrc.io/how-to-set-up-a-private-npm-registry-locally-1065e6790796 om een private npm registry te hosten
+- (eventueel:) Installeer JS packages in de JS applicaties die getest worden via JS_Concolic ("npm install" in bv. input_programs/Calculator, input_programs/socket.io/examples/chat enz. Elke applicatie die je zou willen uitproberen en in wiens folder er een package.json bestand staat)
+
+Concolic tester gebruiken:
+- Start de Backend op: ./shell.sh explore
+- Start via een andere terminal JS_Concolic op via bv. ./shell.sh -m explore -a fs_strings
+of ./shell.sh -m explore -a fs_calculator --explore-events
+of ./shell.sh -m explore -a fs_3buttons --explore-events
+
+Belangrijk: zorg ervoor dat je beide processen stopt als je bv. een andere applicatie wil uitproberen, en zorg ervoor dat de Backend volledig opgestart is voor je JS_Concolic opstart. De Backend print iets als "inputPort = 9876, outputPort = 9877" wanneer die opgestart is.

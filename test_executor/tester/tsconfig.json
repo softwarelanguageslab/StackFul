@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "lib": [
+      "es2021",
+      "es2015.collection",
+      "dom"
+    ],
+    "module": "commonjs",
+    "target": "es2021",
+    "allowJs": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "alwaysStrict": true,
+    "types": ["node", "reflect-metadata", "@types/jest", "@types/estree"],
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [ "./src/*" ]
+    }
+  },
+  "include": ["./src/**/*", "./tests/**/*"]
+}
