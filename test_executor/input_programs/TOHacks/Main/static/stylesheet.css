@@ -1,0 +1,45 @@
+body {
+  background-color: #e8f0fc;
+}
+
+#canvas {
+  float: left;
+  width: 80%;
+  height: 500px;
+  border: 3px solid #000;
+  border-radius: 15px;
+}
+
+#SideBar {
+  float: left;
+  width: 20%;
+}
+
+#SideBar p {
+  font-family: "Elise", "Preta", "Sunshine Daisies", Courier, monospace;
+  font-size: smaller;
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
+  background-color: #d5dbe3;
+  padding: 10px;
+}
+
+#One::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  width: 100%;
+  /* box-sizing: border-box; */
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input:focus {
+  background-color: #ccdbf0;
+  border: white;
+}

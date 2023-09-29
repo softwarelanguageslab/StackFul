@@ -1,0 +1,13 @@
+{
+  "name": "calculator_sockets",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "socket.io": "1.7.4"
+  }
+}

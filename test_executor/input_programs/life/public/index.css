@@ -1,0 +1,50 @@
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Droid Sans", Arial;
+}
+body {
+  width: 640px;
+  margin: 0 auto;
+}
+canvas {
+  background-color: #fff;
+}
+.generation {
+  text-align: center;
+  width: 320;
+  margin: 5 160 -6 160;
+}
+.button-container {
+  margin-top: 0;
+}
+.button {
+  margin: 10 80 10 80;
+  width: 480;
+  font-size: 48px;
+  text-align: center;
+  background-color: #333;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  cursor: default;
+  -webkit-box-shadow: 10px 10px 0px -2px rgba(25,25,30,0.75);
+  box-shadow: 10px 10px 0px -2px rgba(25,25,30,0.75);
+  border: 1px solid #000;
+}
+.button:hover {
+  background-color: #333;
+}
+.button:active {
+  background-color: #000;
+}
+.button:focus {
+  background-color: #333;
+}
+a:hover {
+  text-decoration: none;
+}

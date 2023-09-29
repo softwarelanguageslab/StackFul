@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Bert sample site</title>
+   </head>
+   <body>
+      <div id="canvas"></div>
+      <p><strong> This is a test site for mouse/keyboard events</strong></p>
+      <p> <b>click</b> Press these buttons!
+      <table>
+         <tr>
+            <th> <button id="Button1">1</button> </th>
+            <th> <button id="Button2">2</button> </th>
+            <th> <button id="Button3">3</button> </th>
+         </tr>
+      </table>
+      </p>
+
+      <p>
+         <b>mouseover/mouseout</b> Hover over this image:<br>
+         <img id="globe" border="0" src="favicon.ico" alt="globe" width="32" height="32" />
+         <br />
+      </p>
+
+      <b>select</b> Highlight some text: <input id="inputField" type="text" value="Hello world!">
+      <p>
+
+      <div id="whichButton" ><b>click/contextmenu/auxclick</b> Click this text (with one of your mouse-buttons)<br>
+         0 Specifies the left mouse-button<br>
+         1 Specifies the middle mouse-button<br>
+         2 Specifies the right mouse-button</p>
+      </div>
+
+      <p><b>mousemove/mouseout</b> Mouse over the rectangle, and get the coordinates of your mouse pointer.</p>
+      <div id="coordiv" style="width:500px;height:100px;border:1px solid"></div>
+      <p id="demoCoor"></p>
+
+      <p id="dbevent"><b>dblclick</b> Doubleclick this sentence.</p>
+
+      <b>keyup/keydown</b> Type some text: <input id="keyUpDown" type="text">
+      <p id="demoDownUp"></p>
+
+      <b>blur</b> Leave the input field: <input type="text" id="onblurField" value="Hello world!">
+
+      <p>
+         <b>change</b> Select a new value from the dropdown menu:
+         <select id="dropdown">
+            <option value="default">Default</option>
+            <option value="new option #1">New option #1</option>
+            <option value="new option #2">New option #2</option>
+            <option value="new option #3">New option #3</option>
+         </select>
+      </p>
+
+      <p>
+         <b>focus</b> Give focus to this input field: <input type="text" id="focusField">
+      </p>
+
+			<form id="resetForm"> <b>reset</b> Enter text: <input type="text" value="original text"><input type="reset"></form>
+
+      <script src="/main.js"></script>
+   </body>
+</html>
