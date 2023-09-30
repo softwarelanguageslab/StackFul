@@ -3,6 +3,11 @@
 # StackFul
 ___
 
+A concolic tester for full-stack JavaScript web applications.
+For more information on testing these applications, please read https://doi.org/10.22152/programming-journal.org/2021/5/5
+
+A Docker container for running StackFul will be provided shortly.
+
 ## Overview
 
 There are two major components to the StackFul concolic tester:
